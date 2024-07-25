@@ -20,7 +20,7 @@ grep -v "$CRON_JOB" /home/ubuntu/crontab/current_crontab.txt > /home/ubuntu/cron
 echo "*/5 * * * * /home/ubuntu/shell/log_resource_usage.sh" > /home/ubuntu/crontab/new_crontab.txt
 
 # 새로운 크론탭 파일을 적용
-crontab new_crontab.txt
+crontab /home/ubuntu/crontab/new_crontab.txt
 
 
 # 임시 파일 삭제
