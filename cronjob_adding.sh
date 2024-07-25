@@ -2,7 +2,7 @@
 #!/bin/bash
 
 #  제외하고싶은 구문
-CRON_JOB="*/5 * * * * /usr/local/bin/log_resource_usage.sh"
+CRON_JOB="*/5 * * * * /home/ubuntu/crontab/log_resource_usage.sh"
 
 # 현재 돌아가고있는 크론탭을 임시 파일에 백업
 crontab -l > /home/ubuntu/crontab/current_crontab.txt
@@ -19,4 +19,4 @@ crontab new_crontab.txt
 
 
 # 임시 파일 삭제
-rm current_crontab.txt new_crontab.txt
+rm /home/ubuntu/crontab/current_crontab.txt /home/ubuntu/crontab/new_crontab.txt
