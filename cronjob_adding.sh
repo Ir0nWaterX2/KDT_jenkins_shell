@@ -10,7 +10,7 @@ mkdir -p /home/ubuntu/crontab
 CRON_JOB="*/5 * * * * /home/ubuntu/crontab/log_resource_usage.sh"
 
 # 현재 돌아가고있는 크론탭을 임시 파일에 백업
-crontab -l > /home/ubuntu/crontab/current_crontab.txt
+crontab -l > /home/ubuntu/crontab/current_crontab.txt 2>/dev/null
 
 # 임시 파일에서 특정 구문을 포함하지 않는 라인만을 새로운 파일로 저장
 grep -v "$CRON_JOB" /home/ubuntu/crontab/current_crontab.txt > /home/ubuntu/crontab/new_crontab.txt
