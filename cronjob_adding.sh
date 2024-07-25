@@ -26,5 +26,5 @@ crontab /home/ubuntu/crontab/new_crontab.txt
 # 임시 파일 삭제
 rm /home/ubuntu/crontab/current_crontab.txt /home/ubuntu/crontab/new_crontab.txt
 
-# 크론 실행 
+# 크론 재실행 
 sudo systemctl restart cron
