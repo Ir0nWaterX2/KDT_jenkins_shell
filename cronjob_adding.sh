@@ -1,6 +1,11 @@
 
 #!/bin/bash
 
+
+# crontab 폴더 없으면 만들어주기 
+mkdir -p /home/ubuntu/crontab
+
+
 #  제외하고싶은 구문
 CRON_JOB="*/5 * * * * /home/ubuntu/crontab/log_resource_usage.sh"
 
