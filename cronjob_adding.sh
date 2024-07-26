@@ -19,8 +19,8 @@ crontab -l > /home/ubuntu/crontab/current_crontab.txt
 
 
 # 임시 파일에서 특정 구문을 포함하지 않는 라인만을 새로운 파일로 저장
-grep -v "$CRON_JOB1" /home/ubuntu/crontab/current_crontab.txt > /home/ubuntu/crontab/new_crontab.txt
- 
+grep -v "* * * * * /home/ubuntu/shell/resource_loging.sh" /home/ubuntu/crontab/current_crontab.txt > /home/ubuntu/crontab/new_crontab.txt
+grep -v "* * * * * /home/ubuntu/shell/resource_loging.sh" /home/ubuntu/crontab/current_crontab.txt | grep -v "*/1 * * * * sudo logrotate -f /etc/logrotate.d/resourcelog" > /home/ubuntu/crontab/new_crontab.txt
 
 #  로깅 쉘스크립트 등록 구문을 추가
 echo "$CRON_JOB1" >> /home/ubuntu/crontab/new_crontab.txt
