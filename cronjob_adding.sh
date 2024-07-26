@@ -31,5 +31,9 @@ crontab /home/ubuntu/crontab/new_crontab.txt
 # 임시 파일 삭제
 #rm /home/ubuntu/crontab/current_crontab.txt /home/ubuntu/crontab/new_crontab.txt
 
+
+# old_log 폴더 없으면 만들어주기 
+mkdir -p /home/ubuntu/old_log
+
 # 크론 재실행 
 sudo systemctl restart cron
