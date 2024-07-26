@@ -7,7 +7,9 @@ mkdir -p /home/ubuntu/crontab
 
 
 #  제외하고싶은 구문
-CRON_JOB="*/1 * * * * /home/ubuntu/shell/resource_loging.sh"
+CRON_JOB1="*/1 * * * * /home/ubuntu/shell/resource_loging.sh"
+#(실습용)
+CRON_JOB2="*/1 * * * * sudo logrotate -f /etc/logrotate.d/resourcelog"
 
 
 
@@ -15,13 +17,14 @@ CRON_JOB="*/1 * * * * /home/ubuntu/shell/resource_loging.sh"
 crontab -l > /home/ubuntu/crontab/current_crontab.txt 2>/dev/null
 
 # 임시 파일에서 특정 구문을 포함하지 않는 라인만을 새로운 파일로 저장
-grep -v "$CRON_JOB" /home/ubuntu/crontab/current_crontab.txt > /home/ubuntu/crontab/new_crontab.txt
+grep -v "$CRON_JOB1" /home/ubuntu/crontab/current_crontab.txt > /home/ubuntu/crontab/new_crontab.txt
 
 
 #  로깅 쉘스크립트 등록 구문을 추가
-echo "$CRON_JOB" >> /home/ubuntu/crontab/new_crontab.txt
-#실습용(로테이트를 1분에 한번씩 )
-echo "*/1 * * * * sudo logrotate -f /etc/logrotate.d/resourcelog" >> /home/ubuntu/crontab/new_crontab.txt
+echo "$CRON_JOB1" >> /home/ubuntu/crontab/new_crontab.txt
+
+#( 실습용 - 로테이트를 1분에 한번씩 )
+echo "$CRON_JOB2" >> /home/ubuntu/crontab/new_crontab.txt
 
 
 # 새로운 크론탭 파일을 적용
