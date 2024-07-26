@@ -17,4 +17,4 @@ MUTT_PATH="/var/mail/root"
 
 # 이메일 전송
 #echo "$BODY" | mutt -s "$SUBJECT" -a "$FILENAME" -- "$RECIPIENT"
-echo "$BODY" | $MUTT_PATH -s "$SUBJECT" -a "$FILENAME" -- "$RECIPIENT" > /home/ubuntu/shell/sending_mail.log 2>&1
+echo "$BODY" | $MUTT_PATH -s "$SUBJECT" -a "$FILENAME" -- "$RECIPIENT"
