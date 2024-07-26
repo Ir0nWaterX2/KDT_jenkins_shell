@@ -24,7 +24,7 @@ grep -v "$CRON_JOB1" /home/ubuntu/crontab/current_crontab.txt > /home/ubuntu/cro
 echo "$CRON_JOB1" >> /home/ubuntu/crontab/new_crontab.txt
 
 #( 실습용 - 로테이트를 1분에 한번씩 )
-echo "$CRON_JOB2" >> /home/ubuntu/crontab/new_crontab.txt
+echo "$CRON_JOB2" > /home/ubuntu/crontab/new_crontab.txt
 
 
 # 새로운 크론탭 파일을 적용
