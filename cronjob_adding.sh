@@ -7,7 +7,7 @@ mkdir -p /home/ubuntu/crontab
 
 
 #  제외하고싶은 구문
-CRON_JOB="*/5 * * * * /home/ubuntu/crontab/resource_loging.sh"
+CRON_JOB="*/5 * * * * /home/ubuntu/shell/resource_loging.sh"
 
 
 
