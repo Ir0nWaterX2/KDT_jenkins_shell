@@ -21,7 +21,7 @@ grep -v "$CRON_JOB" /home/ubuntu/crontab/current_crontab.txt > /home/ubuntu/cron
 #  로깅 쉘스크립트 등록 구문을 추가
 echo "*/1 * * * * /home/ubuntu/shell/resource_loging.sh" >> /home/ubuntu/crontab/new_crontab.txt
 #실습용(로테이트를 1분에 한번씩 )
-echo "*/1 * * * * sudo logrotate -f /etc/logrotate.d/resourcelog" >> /home/ubuntu/crontab/new_crontab.txt
+#echo "*/1 * * * * sudo logrotate -f /etc/logrotate.d/resourcelog" >> /home/ubuntu/crontab/new_crontab.txt
 
 
 # 새로운 크론탭 파일을 적용
