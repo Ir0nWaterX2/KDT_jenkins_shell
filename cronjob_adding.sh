@@ -11,10 +11,10 @@ chmod +x /home/ubuntu/shell/sending_mail.sh
 
 
 #  크론잡에 실행할 구문 
-CRON_JOB1="*/1 * * * * /home/ubuntu/shell/resource_loging.sh"
+CRON_JOB1="* * * * * /home/ubuntu/shell/resource_loging.sh"
 #(실습용)
-CRON_JOB2="*/1 * * * * sudo logrotate -f /etc/logrotate.d/resourcelog"
-CRON_JOB3="*/1 * * * * /home/ubuntu/shell/sending_mail.sh"
+CRON_JOB2="* * * * * sudo logrotate -f /etc/logrotate.d/resourcelog"
+CRON_JOB3="* * * * * /home/ubuntu/shell/sending_mail.sh"
 
 #chmod a+rw /home/ubuntu/crontab/new_crontab.txt
 #chmod a+rw /home/ubuntu/crontab/current_crontab.txt
