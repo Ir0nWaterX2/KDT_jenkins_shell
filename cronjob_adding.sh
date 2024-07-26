@@ -23,7 +23,7 @@ grep -v "$CRON_JOB1" /home/ubuntu/crontab/current_crontab.txt > /home/ubuntu/cro
  
 
 #  로깅 쉘스크립트 등록 구문을 추가
-echo "$CRON_JOB1" >> /home/ubuntu/crontab/new_crontab.txt
+#echo "$CRON_JOB1" >> /home/ubuntu/crontab/new_crontab.txt
 
 #( 실습용 - 로테이트를 1분에 한번씩 )
 #echo "$CRON_JOB2" >> /home/ubuntu/crontab/new_crontab.txt
