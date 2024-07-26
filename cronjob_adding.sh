@@ -8,10 +8,6 @@ mkdir -p /home/ubuntu/crontab
 
 #  제외하고싶은 구문
 CRON_JOB="*/5 * * * * /home/ubuntu/crontab/resource_loging.sh"
-#실습용(로테이트를 1분에 한번씩 )
-CRON_JOB="sudo logrotate -f /etc/logrotate.d/resourcelog"
-
-
 
 
 
